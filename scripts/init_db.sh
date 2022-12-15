@@ -4,7 +4,7 @@ set -eo pipefail
 
 # Replace docker by podman on local machines
 FILE=~/.bash_aliases
-if [ ! -f "$FILE" ]; then
+if [ -f "$FILE" ]; then
     shopt -s expand_aliases
     source $FILE
 fi
