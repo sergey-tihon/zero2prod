@@ -3,11 +3,11 @@ set -x
 set -eo pipefail
 
 # Replace docker by podman on local machines
-FILE=~/.bash_aliases
-if [ -f "$FILE" ]; then
-    shopt -s expand_aliases
-    source $FILE
-fi
+# FILE=~/.bash_aliases
+# if [ -f "$FILE" ]; then
+#     shopt -s expand_aliases
+#     source $FILE
+# fi
 
 if ! [ -x "$(command -v psql)" ]; then
   echo >&2 "Error: psql is not installed."
